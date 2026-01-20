@@ -72,6 +72,30 @@ dotnet run --project src/Apex.Api
 
 A API estará disponível em `https://localhost:5001`
 
+### Testando a API
+
+**Criar um cliente:**
+```bash
+curl -X POST https://localhost:5001/api/customers \
+  -H "Content-Type: application/json" \
+  -d '{
+    "apiId": "API_WARREN_001",
+    "document": "12345678901",
+    "company": 1,
+    "sinacorId": "123456789"
+  }'
+```
+
+**Buscar cliente por ID:**
+```bash
+curl https://localhost:5001/api/customers/1
+```
+
+**Buscar cliente por API ID:**
+```bash
+curl https://localhost:5001/api/customers/by-api-id/API_WARREN_001
+```
+
 ## 📁 Estrutura do Projeto
 ```
 apex/
@@ -139,7 +163,19 @@ O sistema foi projetado para suportar:
 
 ## 📚 Documentação
 
-- [Swagger UI](https://localhost:5001/swagger) - Documentação interativa da API
+### API
+- [OpenAPI Spec](https://localhost:5001/openapi/v1.json) - Especificação OpenAPI da API
+- [Customers Endpoints](./docs/api/customers-endpoints.md) - Documentação dos endpoints de Customers
+
+### Domínio
+- [Bond Aggregate](./docs/domain/bond-aggregate.md) - Documentação do agregado Bond
+- [Customer Aggregate](./docs/domain/customer-aggregate.md) - Documentação do agregado Customer
+- [Bond Related Entities](./docs/domain/bond-related-entities.md) - Entidades relacionadas a Bond
+
+### Application Layer
+- [Customer Use Cases](./docs/application/customer-use-cases.md) - Casos de uso de Customer (CQRS)
+
+### Outros
 - [Wiki](./docs/wiki) - Documentação técnica detalhada
 - [ADRs](./docs/adr) - Architecture Decision Records
 - [Runbooks](./docs/runbooks) - Guias operacionais

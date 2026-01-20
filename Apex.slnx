@@ -1,0 +1,22 @@
+<Solution>
+  <Folder Name="/1 - Services/">
+    <Project Path="src/Apex.Api/Apex.Api.csproj" />
+  </Folder>
+  <Folder Name="/2 - Application/">
+    <Project Path="src/Apex.Application/Apex.Application.csproj" />
+  </Folder>
+  <Folder Name="/3 - Domain/">
+    <Project Path="src/Apex.Domain/Apex.Domain.csproj" />
+  </Folder>
+  <Folder Name="/4 - Infrastructure/">
+    <Project Path="src/Apex.Infrastructure/Apex.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/5 - Shared/">
+    <Project Path="src/Apex.Shared/Apex.Shared.csproj" />
+  </Folder>
+  <Folder Name="/6 - Tests/">
+    <Project Path="tests/Apex.ArchitectureTests/Apex.ArchitectureTests.csproj" />
+    <Project Path="tests/Apex.IntegrationTests/Apex.IntegrationTests.csproj" />
+    <Project Path="tests/Apex.UnitTests/Apex.UnitTests.csproj" />
+  </Folder>
+</Solution>
